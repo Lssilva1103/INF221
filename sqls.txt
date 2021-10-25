@@ -1,0 +1,6 @@
+
+//Lista Promocao
+SELECT supermercado.nome,produto.nomeProduto,produto.unidadeMedida,supermercadoproduto.promocao,supermercadoproduto.corredor FROM `supermercadoproduto`,`supermercado`,`produto` WHERE promocao != "" AND supermercadoproduto.IDmercado = supermercado.IDmercado AND supermercadoproduto.codProduto = produto.codProduto
+
+//Relatorio financeiro supermercado
+SELECT pedido.numPedido,pedido.valorTotal,pedido.dataPedido FROM `pedido` WHERE pedido.IDmercado = ?
